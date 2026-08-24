@@ -3,9 +3,20 @@
 # que falta ou passou do prazo
 
 try:
-    print(' --- Consultar seu status de serviço militar --- ')
+    print(' \n--- Consultar seu status de serviço militar --- ')
     ano = int(input('Em que ano você nasceu? '))
     idade = 2026 - ano
+
+    if idade < 18:
+        anos_faltando = 18 - idade
+        print(f'Você não precisa se alistar! Faltam {anos_faltando} Ano(s) para você se alistar ')
+
+    elif idade == 18:
+        print('Está na hora de se alistar! Acesse o site https://alistamento.eb.mil.br/')
+
+    else:
+        anos_passados_do_prazo = idade - 18
+        print(f'Já passou a hora de se alistar! Você está {anos_passados_do_prazo} Ano(s) atrasado ')
     
 
 except ValueError:
