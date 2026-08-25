@@ -2,18 +2,21 @@
 # Se ele vai se alistar futuramente, se é a hora de se alistar, se ja passou do tempo de se alistar, mostrar também o tempo
 # que falta ou passou do prazo
 
+from datetime import date
 
 try:
     print(' \n--- Consultar seu status de serviço militar --- ')
     ano = int(input('Em que ano você nasceu? '))
-    idade = 2026 - ano
+    ano_atual = date.today().year
+    idade = ano_atual - ano
+    
 
-    if ano > 2026:
+    if ano > ano_atual:
         print('Digite um ano válido! ')
 
     else:
 
-        if idade < 18:
+        if idade < 18 or idade:
             anos_faltando = 18 - idade
             print(f'Você não precisa se alistar! Faltam {anos_faltando} Ano(s) para você se alistar ')
 
