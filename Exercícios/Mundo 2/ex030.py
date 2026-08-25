@@ -3,22 +3,24 @@
 
 while True:
     try:
-        print('\n--- Simulado empréstimo --- ')
+        # Perguntas como: Valor da casa, salário, e anos desejados para pagar
+        print('\n--- Simulador de Empréstimo --- ')
         valor_da_casa = float(input('Valor da casa: '))
-        salario = float(input('Seu salário: '))
-        anos_desejados = int(input('Em quantos anos pretende pagar? '))
-        verificacao_salario = salario * 0.3
-        meses_da_parcela = anos_desejados * 12
-        parcelas = valor_da_casa / meses_da_parcela
+        salario = float(input('Salário: '))
+        anos_planejados = int(input('Em quantos anos planeja pagar: '))
+        # Verificações
+        verificacao_salarial = salario * 0.3
+        meses_emprestimo = anos_planejados * 12
+        valor_parcelas = valor_da_casa / meses_emprestimo
 
-        if  parcelas > verificacao_salario:
-                print('Empréstimo negado! Seu salário é muito baixo para realizar nessa quantidade de tempo')
-                
+        if valor_parcelas > verificacao_salarial:
+            print('Empréstimo negado! Seu salário é muito baixo ')
+
         else:
-            print(f'Empréstimo aprovado! Valor do empréstimo R$ {valor_da_casa} para pagar em {meses_da_parcela} parcelas de {parcelas:.2f}')
+            print(f'Empréstimo aprovado! Com parcelas de R$ {valor_parcelas:.2f} por {meses_emprestimo} meses  ')
             break
     except ValueError:
         print('Error')
 
-        
+    
 
