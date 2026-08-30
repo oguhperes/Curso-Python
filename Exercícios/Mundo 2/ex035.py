@@ -28,7 +28,7 @@ while True:
         elif idade <= 19:
             print('Sua categoria é Junior')
 
-        elif idade == 20:
+        elif idade <= 25:
             print('Sua categoria é Sênior! ')
 
         else:

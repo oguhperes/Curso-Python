@@ -12,11 +12,11 @@ try:
     
 
     if ano > ano_atual:
-        print('Digite um ano válido! ')
+        print('Digite um ano válido! ') 
 
     else:
 
-        if idade < 18 or idade:
+        if idade < 18:
             anos_faltando = 18 - idade
             print(f'Você não precisa se alistar! Faltam {anos_faltando} Ano(s) para você se alistar ')
 

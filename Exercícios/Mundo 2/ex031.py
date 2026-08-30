@@ -11,13 +11,13 @@ while True:
         print('4- Sair ')
         opcao = int(input('Opção: '))
         if opcao == 1:
-            print(bin(n1))
+            print(bin(n1)[2:])
 
         elif opcao == 2:
-            print(oct(n1))
+            print(oct(n1)[2:])
 
         elif opcao == 3:
-            print(hex(n1))
+            print(hex(n1)[2:])
 
         elif opcao == 4:
             print('Saindo... Até logo')

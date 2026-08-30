@@ -25,3 +25,4 @@ Curso/
 ## 📌 Sobre
 
 Repositório criado para acompanhar meu aprendizado em Python, praticando os conceitos vistos nas aulas através dos exercícios do curso.
+
