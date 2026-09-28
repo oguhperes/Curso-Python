@@ -4,30 +4,31 @@
 
 from datetime import date
 
-try:
-    print(' \n--- Consultar seu status de serviço militar --- ')
-    ano = int(input('Em que ano você nasceu? '))
-    ano_atual = date.today().year
-    idade = ano_atual - ano
-    
-
-    if ano > ano_atual:
-        print('Digite um ano válido! ') 
-
-    else:
-
-        if idade < 18:
-            anos_faltando = 18 - idade
-            print(f'Você não precisa se alistar! Faltam {anos_faltando} Ano(s) para você se alistar ')
-
-        elif idade == 18:
-            print('Está na hora de se alistar! Acesse o site https://alistamento.eb.mil.br/')
-
+while True:
+    try:
+        print(' \n--- Consultar seu status de serviço militar --- ')
+        ano_de_nascimento = int(input('Ano de nascimento: '))
+        ano_atual = date.today().year
+        if ano_de_nascimento > ano_atual:
+            print('Digite um ano válido! ')
+            continue
         else:
-            anos_passados_do_prazo = idade - 18
-            print(f'Já passou a hora de se alistar! Você está {anos_passados_do_prazo} Ano(s) atrasado ')
-        
+            idade = ano_atual - ano_de_nascimento
 
-except ValueError:
-    print('Digite um número válido! ')
+            if idade < 18:
+                anos_faltando = 18 - (ano_atual - ano_de_nascimento)
+                print(f'Você tem {idade} anos! Falta {anos_faltando} Ano(s) para você se alistar')
+
+            elif idade == 18:
+                print(f'Você tem {idade} Anos. Está na hora de se alistar!!! ')
+
+            elif idade > 18:
+                anos_sobrando = (ano_atual -ano_de_nascimento) - 18
+                print(f'Já passou do tempo de se alistar. Passou {anos_sobrando} Ano(s)!!! ')
+            break
+
+            
+
+    except ValueError:
+        print('Digite um número válido! ')
 

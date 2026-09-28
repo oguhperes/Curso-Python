@@ -1,18 +1,13 @@
 # Aumento salarial, salario superior a 1250 aumento de 10%, para inferiores ou iguais aumento de 15%
 
 try:
-    print(' --- Descubra o seu aumento --- ')
+    print(' \n--- Descubra o seu aumento --- ')
     salario = float(input('Seu salário: '))
-    if salario > 1250:
-        aumento1 = salario * 0.1
-        novo_salario = salario + aumento1
-        print(f'Seu novo salário é R$ {novo_salario:.2f} ')
+    porcentagem = 0.1 if salario > 1250 else 0.15
+    aumento = salario * porcentagem
+    salario_final = salario + aumento
 
-    else:
-        aumento2 = salario * 0.15
-        novo_salario2 = salario + aumento2
-        print(f'Seu nofo salário é R$ {novo_salario2:.2f}')
-
+    print(f'Seu salário era R$ {salario:.2f} e vai ficar R$ {salario_final:.2f}')
 except ValueError:
     print('Digite um número válido! ')
         

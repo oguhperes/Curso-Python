@@ -6,23 +6,14 @@ while True:
         print(' \n--- Situação escolar --- ')
         n1 = float(input('Primeira nota: '))
         n2 = float(input('Segunda nota: '))
-        
-        if n1 < 0 or n1 > 10 or n2 < 0 or n2 > 10:
-            print('Digite sua real nota! ')
-            continue
-
         media = (n1 + n2) / 2
-
         if media < 5:
-            print(f'Você foi reprovado! Sua média foi {media:.1f}')
-
+            print(f'Sua média foi {media}. Você está reprovado!!! ')
         elif media <= 6.9:
-            print(f'Você está de recuperação! Sua média foi {media:.1f}')
-
+            print(f'Sua média foi {media}. Você está de recuperação!!! ')
         else:
-            print(f'Parabéns, você foi aprovado! Sua média foi {media:.1f}')
-
-        break
-
+            print(f'Sua média foi {media}. Você está aprovado !!!')
+        break 
+    
     except ValueError:
         print('Digite um número válido! ')

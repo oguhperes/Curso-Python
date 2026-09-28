@@ -1,31 +1,30 @@
 # Pedra, Papel, Tesoura
 import random
-
+from time import sleep
 while True:
     try:
         print('\n --- Pedra, Papel, Tesoura --- ')
-        lista = ['Pedra', 'Papel', 'Tesoura']
-        
-        escolha_aleatorio = random.choice(lista)
-        escolha_usuario = str(input('Pedra, papel ou tesoura: ')).title().strip()
-        if escolha_usuario not in lista:
-            print('Digite uma palavra válida! ')
+        lista = ['pedra', 'papel', 'tesoura']
+        escolha_usuario = input('Sua escolha: ').lower()
+        escolha_computador = random.choice(lista)
+        sleep(1)
+        print('   Carregando...\n')
+        sleep(1)
+        print(f'Escolha do computador foi {escolha_computador.capitalize()}')
+        sleep(0.5)
+        if escolha_computador == escolha_usuario:
+            print('EMPATE!!! ')
+        elif (
+            (escolha_usuario == 'tesoura' and escolha_computador == 'papel') or 
+            (escolha_usuario == 'pedra' and escolha_computador == 'tesoura') or 
+            (escolha_usuario == 'papel' and escolha_computador == 'pedra')
+        ):
+            print('VOCÊ GANHOU!!! ')
 
         else:
-            print(f'Escolha aleatória: {escolha_aleatorio}')
-            if escolha_aleatorio == escolha_usuario:
-                print("Empate! ")
+            print('VOCÊ PERDEU!!! ')
+        break
 
-            elif (
-                (escolha_usuario == 'Tesoura' and escolha_aleatorio == 'Papel') or
-                (escolha_usuario == 'Papel' and escolha_aleatorio == 'Pedra') or
-                (escolha_usuario == 'Pedra' and escolha_aleatorio == 'Tesoura')
-            ):
-                print('Você ganhou! ')
-
-            else:
-                print('Você perdeu! ')
-            break
 
 
     except ValueError:
