@@ -1,6 +1,5 @@
 # Mostrar a tabuada de varios números. O programa será interrompido quando o número solicitado for negativo
 from time import sleep
-import ex030
 i = 0
 while True:
     sleep(0.4)

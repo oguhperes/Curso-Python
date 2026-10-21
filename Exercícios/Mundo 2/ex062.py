@@ -1,8 +1,8 @@
 # Par ou ímpar. O jogo sera interrompido quando o jogador perder
 # mostrando o total de vitórias consecutivas
-
 from time import sleep
 from random import randint
+
 cont_vitoria = 0
 while True:
     sleep(0.6)

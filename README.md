@@ -9,7 +9,8 @@ Curso/
 ├── Aulas/          # Anotações e códigos das aulas
 └── Exercícios/     # Resolução dos exercícios propostos
     ├── Mundo 1/
-    └── Mundo 2/
+    ├── Mundo 2/
+    └── Mundo 3/
 ```
 
 ## 🚀 Progresso

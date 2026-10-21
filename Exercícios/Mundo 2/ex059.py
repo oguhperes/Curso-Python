@@ -7,7 +7,6 @@ contador = 0
 maior = 0
 menor = 0
 num = 0
-
 while True:
     try:
         while num != 9999:
@@ -31,7 +30,5 @@ while True:
             continue
         else:
             break
-
-
     except ValueError:
         print('Digite um número válido! ')

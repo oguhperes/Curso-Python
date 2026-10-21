@@ -1,8 +1,7 @@
 # Ler  vários números... O programa só para quando o usuario digita
 # 999. No final mostre quantos números foram digitados e qual foi a soma
 
-contador = 0
-soma = 0
+contador = soma = 0
 while True:
     num = int(input('Digite um número inteiro (999 para parar): '))
     if num == 999:
