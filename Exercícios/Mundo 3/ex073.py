@@ -14,7 +14,7 @@ while True:
             continue
         else:
             print('-=' * 30)
-            print(f'Você digitou os valores {number_list}')
+            print(f'Você digitou os valores {sorted(number_list)}')
             break
     else:
         print('Valor duplicado! Não foi adicionado... ')
@@ -23,5 +23,6 @@ while True:
             continue
         else:
             print('-=' * 30)
+            number_list.sort()
             print(f'Você digitou os valores {number_list}')
             break

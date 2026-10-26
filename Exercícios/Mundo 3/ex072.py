@@ -3,7 +3,7 @@
 # Posições na lista
 
 numbers_list = list()
-for c in range(0, 6):
+for c in range(0, 5):
     numbers_list.append(int(input(f'Digite um valor para a Posição {c + 1}: ')))
 print('=-' * 30)
 print(f'Você digitou os valores {numbers_list}')
